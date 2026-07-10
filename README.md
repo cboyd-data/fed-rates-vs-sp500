@@ -35,7 +35,7 @@ and becomes statistically insignificant at longer lags (3, 6, and 12 months), su
 reaction to rate changes is concentrated in the immediate term rather than delayed.
 
 ## Project Status
-🚧 In progress — Google Data Analytics Certificate capstone project
+In progress — Google Data Analytics Certificate capstone project
 
 - [x] Milestone 1: Data acquisition
 - [x] Milestone 2: Data cleaning and merging
