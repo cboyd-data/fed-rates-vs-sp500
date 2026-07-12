@@ -15,9 +15,9 @@ market movement and whether a lag effect exists.
 - **S&P 500**: Yahoo Finance (`^GSPC`), pulled via the `yfinance` library
 
 ## Tools
-Python, pandas, fredapi, yfinance, scipy, matplotlib/seaborn (planned)
+Python, pandas, fredapi, yfinance, scipy, matplotlib, numpy
 
-## Key Findings (Milestone 3)
+## Key Findings
 Using monthly data from July 1954–June 2026 (864 observations), correlation between Fed rate changes 
 and S&P 500 returns was tested at lags of 0, 1, 3, 6, and 12 months:
 
@@ -31,8 +31,20 @@ and S&P 500 returns was tested at lags of 0, 1, 3, 6, and 12 months:
 
 There is a small but statistically significant negative correlation between Fed rate changes and 
 S&P 500 returns in the same month and, to a lesser extent, one month later. This relationship fades 
-and becomes statistically insignificant at longer lags (3, 6, and 12 months), suggesting any market 
-reaction to rate changes is concentrated in the immediate term rather than delayed.
+and becomes statistically insignificant at longer lags, suggesting any market reaction to rate changes 
+is concentrated in the immediate term rather than delayed.
+
+Grouping months by rate direction shows a similar pattern: average S&P 500 returns were higher during 
+rate-cut months (1.13%) than rate-hike months (0.25%), while "no change" months had the highest average 
+return (1.45%) — likely reflecting that stable-rate periods tend to coincide with calmer, more consistent 
+economic conditions overall.
+
+## Visualizations
+![Fed Rate vs S&P 500](chart1_rate_vs_sp500.png)
+- `chart1_rate_vs_sp500.png` — Fed Funds Rate vs. S&P 500 Index level over time
+- `chart2_scatter_regression.png` — Rate change vs. S&P 500 return (same month), with regression line
+- `chart3_correlation_by_lag.png` — Correlation strength across lags, highlighting significant results
+- `chart4_hike_vs_cut.png` — Average S&P 500 return by rate direction (hike/cut/no change)
 
 ## Project Status
 In progress — Google Data Analytics Certificate capstone project
@@ -40,7 +52,7 @@ In progress — Google Data Analytics Certificate capstone project
 - [x] Milestone 1: Data acquisition
 - [x] Milestone 2: Data cleaning and merging
 - [x] Milestone 3: Exploratory analysis and lag correlation testing
-- [ ] Milestone 4: Visualization creation
+- [x] Milestone 4: Visualization creation
 - [ ] Milestone 5: Written summary
 - [ ] Milestone 6: Final polish
 
